@@ -24,7 +24,9 @@
 # g = '@ghasz@1hdsah@1hs@@!'
 # print(g.replace('@',''))
 
+
 # s = 'He has long hair'
+
 # print(s.rfind('h'))
 # s = s[:s.find('h')] + s[s.rfind('h') +1 :]
 # print(s)
@@ -354,20 +356,24 @@ class Car:
 #     print(people.health)
 #     time.sleep(2)
 
-class Truck(Car):
-    wheels_number = 6
-    def __init__(self, name, color, year, is_crashed):
-        Car.__init__(self, name, color, year, is_crashed)
-    def drive(self,city):
-        print(f'Truck {self.name.title()} is driving to {city.title()} !!!')
-    def load_cargo(self, weight):
-        print(f'Truck {self.name.title()} loaded cargo, {weight} kg!')
-truck1 = Truck('AKS', 'red', 2013, False)
-truck1.drive('Moscow')
-truck1.load_cargo(1000)
-truck1.change_color('yellow')
-name1 = 1
-print(truck1.wheels_number)
+# class Truck(Car):
+#     wheels_number = 6
+#     def __init__(self, name, color, year, is_crashed):
+#         Car.__init__(self, name, color, year, is_crashed)
+#     def drive(self,city):
+#         print(f'Truck {self.name.title()} is driving to {city.title()} !!!')
+#     def load_cargo(self, weight):
+#         print(f'Truck {self.name.title()} loaded cargo, {weight} kg!')
+# truck1 = Truck('AKS', 'red', 2013, False)
+# truck1.drive('Moscow')
+# truck1.load_cargo(1000)
+# truck1.change_color('yellow')
+# name1 = 1
+# print(truck1.wheels_number)
 
-
-
+n = int(input())
+result = [[0,1,0]]
+for _ in range(n):
+    a = [0] + [result[-1][i] + result[-1][i + 1] for i in range(len(result[-1]) - 1)] + [0]
+    result.append(a)
+print(result)
