@@ -369,3 +369,5 @@ truck1.change_color('yellow')
 name1 = 1
 print(truck1.wheels_number)
 
+
+
